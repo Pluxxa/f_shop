@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'flow_shop',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'flow_shop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'f_shop',
+        'USER': 'postgres',
+        'PASSWORD': 'Uczgvra2',
+        'HOST': 'localhost',  # Или адрес сервера базы данных
+        'PORT': '5432',       # Стандартный порт для PostgreSQL
     }
 }
 
